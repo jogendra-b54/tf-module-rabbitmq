@@ -13,3 +13,12 @@ This will be the backend module , which will be called from the root module "ter
 
 
 ```
+
+### Here is the plan :
+
+```
+    * we Will create a t3.micro  VM in the private Subnet 1
+    * we will install rabbitMQ on the top of it
+    * using remote_provisioner , we are going to configure RabbitMQ on the top of the VM .
+
+```
