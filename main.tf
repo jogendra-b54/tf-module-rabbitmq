@@ -19,7 +19,7 @@ resource "null_resource" "app_install" {
     type     = "ssh"
     user     = "centos"
     password = "DevOps321"
-    host     = aws_spot_instance_request.allows_rabbitmq     #aws_instance.sample.private_ip : use this only if your provisioner is outside the resourcee
+    host     = aws_spot_instance_request.allows_rabbitmq.private_ip    #aws_instance.sample.private_ip : use this only if your provisioner is outside the resourcee
   }
     inline = [
       "ansible-pull -U https://github.com/jogendra-b54/ansible.git  -e ENV=dev -e COMPONENT=rabbitmq roboshop-pull.yml",
